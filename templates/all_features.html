@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все свойства звука</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <h2 class="text-center">Waveform</h2>
+        <img src="{{url_for('static', filename=waveplot)}}" alt="Waveform">
+        <h2 class="text-center">RMSE (root-mean-square energy)</h2>
+        <img src="{{url_for('static', filename=rms)}}" alt="RMSE">
+        <h2 class="text-center">MFCC (Mel-frequency cepstral coefficients)</h2>
+        <img src="{{url_for('static', filename=mfcc)}}" alt="MFCC">
+        <h2 class="text-center">MFCC delta</h2>
+        <img src="{{url_for('static', filename=mfcc_delta)}}" alt="MFCC delta">
+        <h2 class="text-center">MFCC delta-deltas</h2>
+        <img src="{{url_for('static', filename=mfcc_delta2)}}" alt="MFCC delta-deltas">
+        <a href="{{url_for('upload_file')}}" class="card-link">Загрузить аудиофайл</a>
+    </div>
+</div>
+</body>
+</html>
